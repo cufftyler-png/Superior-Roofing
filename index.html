@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superior Roofing &amp; Home Solutions</title>
+  <meta name="description" content="Superior Roofing & Home Solutions serves Blacksburg, the New River Valley, Roanoke, and surrounding areas with roofing, repairs, gutters, siding, pressure washing, and remodeling." />
+  <style>
+    :root {
+      --navy: #08101f;
+      --navy-2: #0e1a33;
+      --slate: #6b7280;
+      --text: #0f172a;
+      --muted: #64748b;
+      --white: #ffffff;
+      --surface: rgba(255,255,255,0.8);
+      --surface-2: #f8fafc;
+      --line: rgba(148,163,184,0.2);
+      --gold: #f5b323;
+      --gold-2: #ffce5a;
+      --red: #c1121f;
+      --shadow: 0 24px 80px rgba(2, 6, 23, 0.22);
+      --radius: 26px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(245,179,35,0.18), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(193,18,31,0.10), transparent 22%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #0b1226 0%, #12203f 45%, #1f3564 100%);
+      color: #e2e8f0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      font-size: 0.94rem;
+      flex-wrap: wrap;
+    }
+
+    .topbar strong { color: var(--gold-2); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.8);
+      box-shadow: 0 6px 30px rgba(15,23,42,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.95rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      min-width: 0;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0c162f, #1f335f);
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+
+    .logo::before,
+    .logo::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold));
+      transform: skewY(-24deg);
+      border-radius: 3px;
+    }
+
+    .logo::before { width: 11px; height: 34px; left: 13px; top: 11px; }
+    .logo::after { width: 11px; height: 28px; left: 30px; top: 17px; }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text p {
+      margin: 0.18rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 460px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #334155;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .nav-links a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.28rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--red));
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:not(.btn):hover::after { width: 100%; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.98rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); filter: saturate(1.08); }
+
+    .btn-primary {
+      color: var(--white);
+      background: linear-gradient(135deg, #c1121f 0%, #8b1020 100%);
+      box-shadow: 0 18px 40px rgba(193,18,31,0.28);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      background: linear-gradient(135deg, #10203d 0%, #0a1327 100%);
+      box-shadow: 0 18px 40px rgba(8,16,31,0.22);
+    }
+
+    .btn-light {
+      background: rgba(255,255,255,0.14);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(8,16,31,0.90) 0%, rgba(8,16,31,0.68) 45%, rgba(8,16,31,0.35) 100%),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--white);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(8,16,31,0.2), rgba(8,16,31,0.55)),
+        repeating-linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px);
+      z-index: -1;
+    }
+
+    .hero-wrap {
+      padding: 4rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 2rem;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: #fff7df;
+      font-weight: 800;
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h2 {
+      margin: 1rem 0 1rem;
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+    }
+
+    .hero .lead {
+      font-size: 1.08rem;
+      max-width: 58ch;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .dynamic-line {
+      display: inline-block;
+      min-width: 10ch;
+      color: var(--gold-2);
+      text-shadow: 0 0 24px rgba(245,179,35,0.18);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .hero-note {
+      margin-top: 1rem;
+      color: rgba(255,255,255,0.76);
+      font-size: 0.96rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .glass-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(14px);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      padding: 1.2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -24% auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(245,179,35,0.22), transparent 65%);
+      border-radius: 50%;
+    }
+
+    .quote-box {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .mini-stat {
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--gold-2);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .roofline {
+      height: 12px;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .roofline::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--gold), var(--red), var(--gold));
+      background-size: 200% 100%;
+      animation: shimmer 5s linear infinite;
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 1.4rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 700;
+    }
+
+    .scroll-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      box-shadow: 0 0 18px rgba(255,206,90,0.9);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    .floating-cards {
+      margin-top: -3rem;
+      position: relative;
+      z-index: 4;
+    }
+
+    .floating-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .float-card {
+      padding: 1.2rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.10);
+      backdrop-filter: blur(16px);
+    }
+
+    .float-card h4 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+
+    .float-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    section { padding: 5.2rem 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border-radius: 999px;
+      padding: 0.4rem 0.78rem;
+      background: #fff7df;
+      color: #8a5b00;
+      font-size: 0.84rem;
+      font-weight: 800;
+      border: 1px solid rgba(245,179,35,0.32);
+      margin-bottom: 0.8rem;
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 1.1rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.82));
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: 0 24px 60px rgba(2, 6, 23, 0.08);
+      backdrop-filter: blur(12px);
+      padding: 1.35rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--red));
+      opacity: 0.9;
+    }
+
+    .service-card {
+      transition: transform 0.24s ease, box-shadow 0.24s ease;
+      min-height: 230px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 70px rgba(2, 6, 23, 0.13);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.9rem;
+      background: linear-gradient(135deg, #10203d, #213b6d);
+      color: var(--gold-2);
+      font-size: 1.25rem;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .service-card h4,
+    .card h4 {
+      margin: 0 0 0.45rem;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-card p,
+    .card p,
+    .card li { color: var(--muted); }
+
+    .showcase {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .showcase-visual {
+      min-height: 480px;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(8,16,31,0.1), rgba(8,16,31,0.5)),
+        url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-overlay {
+      position: absolute;
+      inset: auto 1.2rem 1.2rem 1.2rem;
+      color: white;
+      background: rgba(8,16,31,0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 1rem 1.1rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      padding: 1rem 1.1rem;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.9));
+      border: 1px solid rgba(148,163,184,0.18);
+      box-shadow: 0 18px 40px rgba(2,6,23,0.06);
+      text-align: center;
+    }
+
+    .stat span {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--red);
+      font-weight: 900;
+      margin-bottom: 0.35rem;
+    }
+
+    .areas-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .area-pill {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.82));
+      border: 1px solid rgba(148,163,184,0.18);
+      box-shadow: 0 14px 35px rgba(2,6,23,0.05);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .finance-card {
+      background:
+        linear-gradient(140deg, rgba(255,247,223,0.92), rgba(255,255,255,0.88)),
+        radial-gradient(circle at top right, rgba(245,179,35,0.18), transparent 30%);
+      border: 1px solid rgba(245,179,35,0.26);
+    }
+
+    .blog-empty {
+      text-align: center;
+      border-radius: 32px;
+      padding: 2.4rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,250,252,0.9));
+      border: 1px dashed rgba(148,163,184,0.5);
+      box-shadow: 0 20px 50px rgba(2,6,23,0.05);
+    }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      color: white;
+      background:
+        linear-gradient(120deg, rgba(8,16,31,0.97), rgba(14,26,51,0.94)),
+        url('https://images.unsplash.com/photo-1632759145351-d0f7cc4b4f3e?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8,16,31,0.75), rgba(8,16,31,0.45));
+      pointer-events: none;
+    }
+
+    .cta > * { position: relative; z-index: 1; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      border-radius: 20px;
+      background: rgba(248,250,252,0.92);
+      border: 1px solid rgba(148,163,184,0.18);
+    }
+
+    .socials {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      padding: 0.75rem 0.95rem;
+      border-radius: 999px;
+      font-weight: 800;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.84));
+      border: 1px solid rgba(148,163,184,0.18);
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+
+    .fine-print { font-size: 0.95rem; color: var(--muted); }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.35); opacity: 1; }
+    }
+
+    @keyframes shimmer {
+      from { background-position: 0% 50%; }
+      to { background-position: 200% 50%; }
+    }
+
+    @media (max-width: 1040px) {
+      .hero-grid,
+      .showcase,
+      .cta,
+      .contact-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .floating-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-cards { margin-top: 1.2rem; }
+      .hero h2 { max-width: none; }
+    }
+
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .nav-links { justify-content: flex-start; }
+      .hero-wrap { padding-top: 3rem; }
+      .hero h2 { font-size: 2.6rem; }
+      .brand-text p { max-width: 100%; white-space: normal; }
+      .mini-grid,
+      .stats { grid-template-columns: 1fr; }
+      .contact-item { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div><strong>10% Off:</strong> Senior, Military, Police &amp; Fire</div>
+      <div>Serving Blacksburg, Christiansburg, Radford, Roanoke, Salem &amp; surrounding areas since 2003.</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <div class="logo"></div>
+        <div class="brand-text">
+          <h1>Superior Roofing &amp; Home Solutions</h1>
+          <p>Residential and commercial roofing, repairs, remodeling, gutters, siding, and pressure washing</p>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#financial">Financial</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact" class="btn btn-primary">Free Estimate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Owner is a Virginia Tech Graduate • Go Hokies</div>
+            <h2>Built to protect. Styled to impress. <span class="dynamic-line" id="dynamic-line">Roof replacements.</span></h2>
+            <p class="lead">
+              Superior Roofing &amp; Home Solutions delivers the services shown on the current site in a more premium, high-conversion layout:
+              roofing, roof repair, commercial work, storm restoration, insurance claims, gutters, siding, pressure washing, skylights, chimneys, and interior remodeling.
+            </p>
+            <div class="hero-actions">
+              <a href="tel:5403920997" class="btn btn-primary">Call Office: (540) 392-0997</a>
+              <a href="tel:3363147639" class="btn btn-light">Call Brock: (336) 314-7639</a>
+              <a href="#financial" class="btn btn-secondary">Make a Payment</a>
+            </div>
+            <div class="hero-note">Upfront pricing. No hourly charges for additional work beyond the contracted scope of work. No additional material surcharges.</div>
+            <div class="scroll-cue"><span class="scroll-dot"></span> Scroll to explore services</div>
+          </div>
+
+          <div class="hero-side">
+            <div class="hero-panel glass-card">
+              <div class="quote-box">
+                <div class="pill">Why homeowners choose us</div>
+                <h3 style="margin:0; font-size:1.55rem; line-height:1.05;">A stronger, cleaner, more premium online presence.</h3>
+                <p style="margin:0; color:rgba(255,255,255,0.8);">This design uses roofing visuals, layered lighting, animated text, strong calls to action, and modern card layouts.</p>
+                <div class="mini-grid">
+                  <div class="mini-stat">
+                    <strong>2003</strong>
+                    Serving the region since
+                  </div>
+                  <div class="mini-stat">
+                    <strong>Free</strong>
+                    Estimates available
+                  </div>
+                  <div class="mini-stat">
+                    <strong>Lifetime</strong>
+                    Shingle &amp; metal options
+                  </div>
+                  <div class="mini-stat">
+                    <strong>NRV</strong>
+                    Local service coverage
+                  </div>
+                </div>
+                <div class="roofline"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-cards">
+          <div class="floating-grid">
+            <div class="float-card">
+              <h4>Residential Roofing</h4>
+              <p>Modern replacement and repair work with long-term durability in mind.</p>
+            </div>
+            <div class="float-card">
+              <h4>Commercial Roofing</h4>
+              <p>Professional solutions for business properties and larger structures.</p>
+            </div>
+            <div class="float-card">
+              <h4>Storm Restoration</h4>
+              <p>Support after wind, hail, and weather-related roofing damage.</p>
+            </div>
+            <div class="float-card">
+              <h4>Exterior Upgrades</h4>
+              <p>Gutters, siding, pressure washing, skylights, and chimney-related work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill">Services</div>
+            <h3>Everything from the current site, presented with a sharper visual identity.</h3>
+          </div>
+          <p>These cards keep the same core offerings while making them easier to scan and far more professional on desktop and mobile.</p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card service-card"><div class="service-icon">⌂</div><h4>Residential Roofing</h4><p>Roof replacements and installations for homeowners throughout Blacksburg and the surrounding region.</p></article>
+          <article class="card service-card"><div class="service-icon">🛠</div><h4>Roof Repair</h4><p>Leak repair, damage repair, and targeted fixes designed to restore integrity fast.</p></article>
+          <article class="card service-card"><div class="service-icon">▣</div><h4>Commercial Roofing</h4><p>Reliable commercial roofing solutions for buildings, businesses, and property managers.</p></article>
+          <article class="card service-card"><div class="service-icon">▤</div><h4>Sheet Metal Roofing</h4><p>Lifetime sheet metal systems built for lasting protection and a clean finished look.</p></article>
+          <article class="card service-card"><div class="service-icon">⛈</div><h4>Storm Damage Restoration</h4><p>Fast-response restoration support after major weather events or visible roof damage.</p></article>
+          <article class="card service-card"><div class="service-icon">✓</div><h4>Insurance Claims</h4><p>Help with roofing and restoration work tied to insurance claim processes.</p></article>
+          <article class="card service-card"><div class="service-icon">▥</div><h4>Vinyl Siding</h4><p>Exterior siding solutions that improve both protection and curb appeal.</p></article>
+          <article class="card service-card"><div class="service-icon">∪</div><h4>Gutters &amp; Maintenance</h4><p>Gutter installs and upkeep to help protect fascia, drainage, and foundations.</p></article>
+          <article class="card service-card"><div class="service-icon">💧</div><h4>Pressure Washing</h4><p>Refresh and clean siding, walkways, roof-adjacent surfaces, and exterior materials.</p></article>
+          <article class="card service-card"><div class="service-icon">✦</div><h4>Interior Remodeling</h4><p>Additional interior home improvement work alongside roofing and exterior services.</p></article>
+          <article class="card service-card"><div class="service-icon">☼</div><h4>Skylights &amp; Chimneys</h4><p>Roofline details and specialty work for skylights, chimney flashing, and surrounding areas.</p></article>
+          <article class="card service-card"><div class="service-icon">▬</div><h4>EPDM Roofing</h4><p>EPDM and flat-style roof solutions for compatible residential and commercial needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="showcase">
+          <div class="showcase-visual">
+            <div class="showcase-overlay">
+              <div class="pill" style="background:rgba(255,255,255,0.12); color:#fff2cc; border-color:rgba(255,255,255,0.12);">Superior Roofing &amp; Home Solutions</div>
+              <h3 style="margin:0 0 0.35rem; font-size:1.5rem;">Almost two decades of regional service.</h3>
+              <p style="margin:0; color:rgba(255,255,255,0.82);">Serving Blacksburg, the New River Valley, Roanoke, and nearby communities with roofing and exterior improvement work since 2003.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-head" style="margin-bottom:1rem;">
+              <div>
+                <div class="pill">About</div>
+                <h3>Trusted local coverage with a stronger brand presence.</h3>
+              </div>
+            </div>
+            <p style="color:var(--muted); margin-top:0;">The current site emphasizes long-standing service, free estimates, lifetime roofing options, and the owner’s Virginia Tech connection. This version keeps those points while presenting them in a much more polished way.</p>
+
+            <div class="stats">
+              <div class="stat"><span>2003</span>Serving the region since</div>
+              <div class="stat"><span>10%</span>Senior, Military, Police &amp; Fire discount</div>
+              <div class="stat"><span>VT</span>Owner is a Virginia Tech graduate</div>
+              <div class="stat"><span>Free</span>Estimate available</div>
+            </div>
+
+            <div class="areas-list">
+              <div class="area-pill">Blacksburg</div>
+              <div class="area-pill">Christiansburg</div>
+              <div class="area-pill">Radford</div>
+              <div class="area-pill">Roanoke</div>
+              <div class="area-pill">Salem</div>
+              <div class="area-pill">Surrounding Areas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card">
+          <div class="pill">Company Advantages</div>
+          <h4>What this site now communicates better</h4>
+          <ul>
+            <li>Specializing in residential and commercial roofing since 2003.</li>
+            <li>Lifetime shingle and sheet metal roofing offerings.</li>
+            <li>Storm damage restoration and insurance-related support.</li>
+            <li>Additional home services like siding, gutters, pressure washing, and remodeling.</li>
+            <li>Local identity with strong Blacksburg and New River Valley positioning.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="pill">Design Upgrades</div>
+          <h4>What changed visually</h4>
+          <ul>
+            <li>Roofing-style hero visuals instead of a plain flat header.</li>
+            <li>Animated headline text for a more premium first impression.</li>
+            <li>Glassmorphism cards, stronger hierarchy, and cleaner spacing.</li>
+            <li>More dynamic lighting, gradients, and modern mobile-friendly sections.</li>
+            <li>Sharper calls to action that make phone contact and estimates more prominent.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="financial">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill">Financial</div>
+            <h3>Keep the payment page, but make it feel intentional.</h3>
+          </div>
+          <p>The original site includes a financial page with a payment button. This layout keeps that function while styling it more professionally.</p>
+        </div>
+
+        <div class="card finance-card">
+          <div class="grid-2">
+            <div>
+              <h4>Make a payment</h4>
+              <p>Use this section for the same payment flow currently referenced by the existing site.</p>
+              <a class="btn btn-primary" href="#">Pay Here</a>
+              <p class="fine-print" style="margin-top: 0.9rem;">Replace this placeholder with the real payment URL.</p>
+            </div>
+            <div>
+              <h4>Transparent pricing message</h4>
+              <p>Upfront pricing. No hourly charges for additional work beyond the contracted scope of work. No additional material surcharges.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="pill">Blog</div>
+            <h3>Blog page preserved, but styled to look polished even before posts are published.</h3>
+          </div>
+          <p>The current site appears to have blog categories and no published posts yet. This keeps that page present and visually complete.</p>
+        </div>
+
+        <div class="blog-empty">
+          <div class="pill">All Posts • Getting Started • Your Community</div>
+          <h4 style="font-size:1.5rem; margin-bottom:0.35rem;">Fresh posts coming soon</h4>
+          <p style="margin:0; color:var(--muted);">Once articles are published, they can appear here with matching card styles and category filters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div>
+            <div class="pill" style="background:rgba(255,255,255,0.10); color:#fff2cc; border-color:rgba(255,255,255,0.10);">Free Estimate</div>
+            <h3 style="margin:0 0 0.45rem; font-size:2.15rem; line-height:1;">Need roofing help or exterior repairs?</h3>
+            <p style="margin:0; color:rgba(255,255,255,0.82); max-width:56ch;">Call now for service across Blacksburg, Christiansburg, Radford, Roanoke, Salem, and surrounding areas.</p>
+          </div>
+          <div style="display:flex; gap:0.85rem; flex-wrap:wrap; justify-content:flex-end;">
+            <a class="btn btn-primary" href="tel:5403920997">Call Office</a>
+            <a class="btn btn-light" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="card">
+          <div class="pill">Contact</div>
+          <h3 style="margin-top:0;">Reach the team</h3>
+          <p>Keep the contact paths already shown on the current site, but present them more clearly.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div><strong>Brock's Cell</strong><div class="fine-print">Primary mobile contact</div></div><a href="tel:3363147639">(336) 314-7639</a></div>
+            <div class="contact-item"><div><strong>Office</strong><div class="fine-print">Main office line</div></div><a href="tel:5403920997">(540) 392-0997</a></div>
+            <div class="contact-item"><div><strong>Additional number on current site</strong><div class="fine-print">Keep visible if still active</div></div><a href="tel:5407133040">540-713-3040</a></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pill">Social</div>
+          <h3 style="margin-top:0;">Stay connected</h3>
+          <p>These mirror the social presence shown on the existing site. Swap in the exact URLs where needed.</p>
+          <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Google+</a>
+            <a href="#">YouTube</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Instagram</a>
+          </div>
+          <p class="fine-print" style="margin-top:1rem;">Like us on Facebook.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center;">
+      <div>
+        <strong>Superior Roofing &amp; Home Solutions, LLC</strong><br />
+        <span class="fine-print">Stylized website draft based on the current Wix site content and structure.</span>
+      </div>
+      <div class="fine-print">© Superior Roofing &amp; Home Solutions</div>
+    </div>
+  </footer>
+
+  <script>
+    const dynamicPhrases = [
+      'Roof replacements.',
+      'Storm damage repair.',
+      'Metal roofing.',
+      'Gutters & siding.',
+      'Pressure washing.',
+      'Free estimates.'
+    ];
+
+    const dynamicLine = document.getElementById('dynamic-line');
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function tickDynamicText() {
+      const current = dynamicPhrases[phraseIndex];
+      dynamicLine.textContent = deleting
+        ? current.slice(0, charIndex--)
+        : current.slice(0, charIndex++);
+
+      let speed = deleting ? 45 : 80;
+
+      if (!deleting && charIndex === current.length + 1) {
+        deleting = true;
+        speed = 1300;
+      } else if (deleting && charIndex < 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % dynamicPhrases.length;
+        charIndex = 0;
+        speed = 260;
+      }
+
+      window.setTimeout(tickDynamicText, speed);
+    }
+
+    tickDynamicText();
+  </script>
+</body>
+</html>
